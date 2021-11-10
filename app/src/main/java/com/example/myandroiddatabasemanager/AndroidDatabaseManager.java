@@ -206,13 +206,13 @@ public class AndroidDatabaseManager extends Activity implements AdapterView.OnIt
 
                     tvmessage.setBackgroundColor(Color.parseColor("#2ecc71"));
                     if (c4 != null) {
-                        tvmessage.setText("Queru Executed successfully.Number of rows returned :" + c4.getCount());
+                        tvmessage.setText("Query Executed successfully.Number of rows returned :" + c4.getCount());
                         if (c4.getCount() > 0) {
                             indexInfo.maincursor = c4;
                             refreshTable(1);
                         }
                     } else {
-                        tvmessage.setText("Queru Executed successfully");
+                        tvmessage.setText("Query Executed successfully");
                         refreshTable(1);
                     }
 
@@ -663,14 +663,14 @@ public class AndroidDatabaseManager extends Activity implements AdapterView.OnIt
                             LinearLayout cell1 = new LinearLayout(AndroidDatabaseManager.this);
                             cell1.setBackgroundColor(Color.WHITE);
                             cell1.setLayoutParams(tableRowParams);
-                            final TextView tableheadercolums = new TextView(getApplicationContext());
+                            final TextView tableheadercolums1 = new TextView(getApplicationContext());
                             // tableheadercolums.setBackgroundDrawable(gd);
-                            tableheadercolums.setPadding(0, 0, 4, 3);
-                            tableheadercolums.setText("" + indexInfo.emptyColName.get(k));
-                            tableheadercolums.setTextColor(Color.parseColor("#000000"));
+                            tableheadercolums1.setPadding(0, 0, 4, 3);
+                            tableheadercolums1.setText("" + indexInfo.emptyColName.get(k));
+                            tableheadercolums1.setTextColor(Color.parseColor("#000000"));
 
                             //columsView.setLayoutParams(tableRowParams);
-                            cell1.addView(tableheadercolums);
+                            cell1.addView(tableheadercolums1);
                             tableheader2.addView(cell1);
 
                         }
